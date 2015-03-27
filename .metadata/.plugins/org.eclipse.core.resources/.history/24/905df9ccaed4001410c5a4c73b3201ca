@@ -1,0 +1,12 @@
+/**
+ * Name: Jou Dan-Haur
+ * ID: U10316046
+ * Ex: 11.8
+ */
+public class Test {
+	public static void main(String[] args) {
+		Account account = new Account(1122,1000);
+
+	}
+
+}
