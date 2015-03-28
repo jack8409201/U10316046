@@ -10,7 +10,7 @@ public class Account{
 	private double annualInterestRate = 0;
 	private java.util.Date dateCreated;
 	private String name;
-	private java.util.ArrayList transactions = new java.util.ArrayList();
+	private java.util.ArrayList transactions;
 
 	//A no-arg constructor constructs to default value
 	public Account(){
@@ -18,6 +18,7 @@ public class Account{
 	//A constructor specifies id and initialize balance
 	public Account(int id, double balance, String name){
 		dateCreated = new java.util.Date();
+		transactions = new java.util.ArrayList();
 		this.id = id;
 		this.balance = balance;
 		this.name = name;
@@ -60,10 +61,12 @@ public class Account{
 	//Withdraw the money
 	public void withdraw(double amount){
 		balance -= amount;
+		transactions.add(new Transaction('W', amount, balance, " "));
 	}
 	//Deposit the money
 	public void deposit(double amount){
 		balance += amount;
+		transactions.add(new Transaction('D', amount, balance, " "));
 	}
 	//Get the dateCreated
 	public java.util.Date getDateCreated() {
