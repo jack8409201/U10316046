@@ -11,18 +11,18 @@ public class Test {
 		Scanner input = new Scanner(System.in);
 		
 		//Create MyMyStack class
-		MyMyStack MyMyStack1 = new MyMyStack();
+		MyStack MyStack1 = new MyStack();
 		
 		//Enter five strings and store in ArrayList
 		for(int i = 0; i < 5; i++){
 			System.out.print("Please enter a string : ");
 			String scanner = input.next();
-			MyMyStack1.push(scanner);
+			MyStack1.push(scanner);
 		}
 		
 		//When the ArrayList isn't empty display
-		while(! MyMyStack1.isEmpty()){
-			System.out.print(MyMyStack1.pop()+" ");
+		while(!MyStack1.isEmpty()){
+			System.out.print(MyStack1.pop()+" ");
 		}
 	}
 
