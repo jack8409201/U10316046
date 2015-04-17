@@ -1,17 +1,12 @@
-/**
- * Name: Jou Dan-Haur
- * ID: U10316046
- * Ex: 11.10
- */
 import java.util.ArrayList;
-public class MyStack extends ArrayList<Object>{
-	
+
+public class MyStack extends ArrayList<String>{
 	private ArrayList<String> list = new ArrayList<String>();
-	
+
 	public boolean isEmpty() {
 		return super.isEmpty();
 	}
-	
+
 	public int getSize() {
 		return super.size();
 	}
@@ -25,13 +20,14 @@ public class MyStack extends ArrayList<Object>{
 		super.remove(getSize() - 1);
 		return o;
 	}
-	
-	public void push(Object o) {
+
+	public void push(String o) {
 		super.add(o);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "stack: " + super.toString();
 	}
 }
+
